@@ -1,0 +1,16 @@
+{
+  "name": "bsu-platform",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "echo \"Run: cd backend && npm run dev  |  cd frontend && npm run dev\"",
+    "build": "echo \"Build frontend and backend separately\""
+  },
+  "dependencies": {
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.11.0"
+  }
+}

@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*  Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation Utility Classes */
+.animate-fade-in-up {
+  animation: fadeInUp 600ms ease-out forwards;
+}
+
+.animate-fade-in-up-delay-100 {
+  animation: fadeInUp 600ms ease-out forwards 100ms;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-200 {
+  animation: fadeInUp 600ms ease-out forwards 200ms;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-300 {
+  animation: fadeInUp 600ms ease-out forwards 300ms;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-400 {
+  animation: fadeInUp 600ms ease-out forwards 400ms;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-500 {
+  animation: fadeInUp 600ms ease-out forwards 500ms;
+  opacity: 0;
+}
+
+.animate-card {
+  animation: fadeInUp 600ms ease-out forwards;
+}
+
+/*  Light Mode */
+:root {
+  --surface: 255 255 255;
+  --foreground: 16 24 40;
+  --muted: 75 85 99;
+
+  --card: 255 255 255;
+  --border: 226 232 240;
+}
+
+/* 🌙 Dark Mode */
+html.dark {
+  --surface: 10 15 28;
+  --foreground: 248 250 252;   /*  نص أبيض واضح */
+  --muted: 180 190 210;        /*  نص ثانوي واضح */
+
+  --card: 15 23 42;
+  --border: 51 65 85;
+}
+
+
+body {
+  background: url(../public/background.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Academic Background Pattern */
+.bg-academic {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #f5f3ff 100%);
+  position: relative;
+}
+
+.bg-academic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(90deg, rgba(59, 130, 246, 0.02) 1px, transparent 1px),
+    linear-gradient(rgba(59, 130, 246, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+/* Min height screen with academic background */
+.min-h-screen-academic {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #f5f3ff 100%);
+}
+
+.min-h-screen-academic::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/*   تعديل النصوص */
+
+/* النصوص الرمادية */
+.text-gray-400,
+.text-gray-500,
+.text-gray-600 {
+  color: rgb(var(--muted)) !important;
+}
+
+/* العناوين */
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(var(--foreground)) !important;
+}
+
+/* الكروت */
+.bg-white {
+  background-color: rgb(var(--card)) !important;
+}
+
+.border {
+  border-color: rgb(var(--border)) !important;
+}
+
+/* تحسين القراءة */
+p {
+  color: rgb(var(--muted));
+}
