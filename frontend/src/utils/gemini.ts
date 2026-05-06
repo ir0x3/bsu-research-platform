@@ -1,5 +1,5 @@
 export async function generateGeminiResponse(prompt: string, history: {role: string, parts: {text: string}[]}[] = []) {
-  const API_KEY = "";
+  const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
   
   const modelConfigs = [
     { model: "gemini-2.0-flash-lite", version: "v1" },
